@@ -3,72 +3,8 @@
 
 %table.services
   %tbody
-    %tr
-      %td= image_tag('favicons/facebook.png')
-      %td
-        %h3 Facebook
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('facebook')
-      %td= last_import_helper('facebook')
-        
-    %tr
-      %td= image_tag('favicons/flickr.png')
-      %td
-        %h3 Flickr
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('flickr')
-      %td= last_import_helper('flickr')
-        
-    %tr
-      %td= image_tag('favicons/foursquare.png')
-      %td
-        %h3 Foursquare
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('foursquare')
-      %td= last_import_helper('foursquare')
-            
-    %tr
-      %td= image_tag('favicons/instagram.png')
-      %td
-        %h3 Instagram        
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('instagram')
-      %td= last_import_helper('instagram')
-        
-    %tr
-      %td= image_tag('favicons/linkedin.png')
-      %td
-        %h3 LinkedIn
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('linkedin')
-      %td= last_import_helper('linkedin')
-        
-    %tr
-      %td= image_tag('favicons/netflix.png')
-      %td
-        %h3 Netflix
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('netflix')
-      %td= last_import_helper('netflix')
-        
-        
-    %tr
-      %td= image_tag('favicons/rdio.png')
-      %td
-        %h3 Rdio
-      %td{:width=>'30px'} &nbsp;        
-      %td=raw import_refresh_helper('rdio')
-      %td= last_import_helper('rdio')
-        
-        
-    %tr
-      %td= image_tag('favicons/twitter.png')
-      %td
-        %h3 Twitter
-      %td{:width=>'30px'} &nbsp;
-      %td=raw import_refresh_helper('twitter')
-      %td= last_import_helper('twitter')
-      
+    - for auth_client in @active_auth_clients
+      = render :partial => 'service', :locals => {:service => auth_client}
         
 
 %br/
