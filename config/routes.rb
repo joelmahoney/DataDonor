@@ -1,18 +1,17 @@
 Datadonor::Application.routes.draw do
-  resources :authentications
-
-  resources :auth_clients
-
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # 
   # devise_scope :user do
   #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   # end
 
-  root :to => 'high_voltage/pages#show', :id => 'home'
+  root :to => 'pages#show', :id => 'home'
   
   match '/auth/:provider/callback', to: 'sessions#create'
+  match "/pages/*id" => 'pages#show', :as => :page, :format => false
   
+  resources :authentications
+  resources :auth_clients
   resources :users
   resources :sessions
 
