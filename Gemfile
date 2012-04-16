@@ -7,15 +7,32 @@ gem 'rails', '3.2.3'
 
 gem 'jquery-rails'
 gem 'high_voltage'
+
+# Omniauth
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-
+gem 'omniauth-foursquare'
+gem 'omniauth-linkedin'
+gem 'omniauth-netflix'
+gem 'omniauth-rdio'
+gem 'omniauth-meetup'
+# gem 'omniauth-runkeeper'
+gem 'omniauth-flickr'
+gem 'omniauth-instagram'
+gem 'omniauth-instapaper'
+gem 'omniauth-tumblr'
+gem 'omniauth-vimeo'
+gem 'omniauth-youtube'
+gem 'omniauth-yahoo'
+gem 'omniauth-yammer'
+gem 'omniauth-google-oauth2'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'compass-rails'
+  gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.2'
 
@@ -26,12 +43,15 @@ group :assets do
 end
 
 group :production do 
+  gem 'thin'
   gem 'pg'
   # gem 'newrelic_rpm'
 end
 
 group :development do
+  gem 'thin'
   gem 'sqlite3'
+  gem 'foreman'
 end
 
 

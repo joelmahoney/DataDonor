@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @authentication.user_id
+%p
+  %b Auth client:
+  = @authentication.auth_client_id
+%p
+  %b Uid:
+  = @authentication.uid
+%p
+  %b Token:
+  = @authentication.token
+%p
+  %b Secret:
+  = @authentication.secret
+%p
+  %b Expires at:
+  = @authentication.expires_at
+
+= link_to 'Edit', edit_authentication_path(@authentication)
+\|
+= link_to 'Back', authentications_path

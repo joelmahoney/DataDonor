@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  auth_client_id: 1
+  uid: MyString
+  token: MyString
+  secret: MyString
+  expires_at: 2012-04-15 12:37:25
+
+two:
+  user_id: 1
+  auth_client_id: 1
+  uid: MyString
+  token: MyString
+  secret: MyString
+  expires_at: 2012-04-15 12:37:25

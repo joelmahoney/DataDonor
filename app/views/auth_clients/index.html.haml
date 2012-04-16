@@ -1,0 +1,23 @@
+%h1 Listing auth_clients
+
+%table
+  %tr
+    %th Name
+    %th App key
+    %th App secret
+    %th
+    %th
+    %th
+
+  - @auth_clients.each do |auth_client|
+    %tr
+      %td= auth_client.name
+      %td= auth_client.app_key
+      %td= auth_client.app_secret
+      %td= link_to 'Show', auth_client
+      %td= link_to 'Edit', edit_auth_client_path(auth_client)
+      %td= link_to 'Destroy', auth_client, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Auth client', new_auth_client_path

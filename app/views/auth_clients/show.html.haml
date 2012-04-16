@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @auth_client.name
+%p
+  %b App key:
+  = @auth_client.app_key
+%p
+  %b App secret:
+  = @auth_client.app_secret
+
+= link_to 'Edit', edit_auth_client_path(@auth_client)
+\|
+= link_to 'Back', auth_clients_path
