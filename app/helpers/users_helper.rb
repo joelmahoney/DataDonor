@@ -6,4 +6,16 @@ module UsersHelper
       link_to image_tag('heart-icon-gray.png'), "/auth/#{service}"
     end
   end
+  
+  def import_refresh_helper(service)
+    link = "/auth/#{service}"
+    if current_user && current_user.authentications.find_by_auth_client_name(service).present?
+      "#{current_user.authentications.find_by_auth_client_name(service).updated_at.to_date}"
+    else
+      "<div class='btn-group'>#{link_to 'Import', link, :class=>'btn btn-mini btn-primary'}</div>"
+    end
+  end
+  
+  def last_import_helper(service)
+  end
 end

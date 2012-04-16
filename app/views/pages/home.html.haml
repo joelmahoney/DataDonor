@@ -1,4 +1,16 @@
+#tagline
+  %h1.red
+    Personal information is the &ldquo;price of entry&rdquo; on the web.
+    %br/
+    Now you can use your data for something good.
+  %br/
+  = link_to "Learn More", page_path('about')
+  &rarr;
+  
 #signup
-  <a href='/auth/facebook?action=signin' class='no-hover'><button type='submit' class='zocial facebook'>Sign In</button></a>
+  %h2
+    Get Started:
+    
+  <a href='/auth/facebook' class='no-hover'><button type='submit' class='zocial facebook'>Sign In</button></a>
   &nbsp;
-  <a href='/auth/twitter?action=signin' class='no-hover'><button type='submit' class='zocial twitter'>Sign In</button></a>    
+  <a href='/auth/twitter' class='no-hover'><button type='submit' class='zocial twitter'>Sign In</button></a>    
