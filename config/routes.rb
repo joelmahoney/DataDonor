@@ -5,13 +5,13 @@ Datadonor::Application.routes.draw do
   #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   # end
 
-  root :to => 'pages#show', :id => 'home'
+  root :to => 'pages#home'
   
   match '/auth/:provider/callback', to: 'sessions#create'
-  match "/pages/*id" => 'pages#show', :as => :page, :format => false
   
   resources :authentications
   resources :auth_clients
+  resources :pages
   resources :users
   resources :sessions
 
