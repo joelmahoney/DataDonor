@@ -1,7 +1,0 @@
-%tr
-  %td= image_tag("favicons/#{service.name.downcase}.png")
-  %td
-    %h3= service.name
-  %td{:width=>'10px'} &nbsp;
-  %td.center=raw import_refresh_helper(service.name.downcase)
-  %td= last_import_helper(service.name.downcase)

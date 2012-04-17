@@ -1,29 +1,70 @@
-%h1 Listing authentications
+%h1 Supported Services
+%br/
+%br/
 
-%table
-  %tr
-    %th User
-    %th Auth client
-    %th Uid
-    %th Token
-    %th Secret
-    %th Expires at
-    %th
-    %th
-    %th
+%table.services
+  %tbody
+    - for auth_client in @active_auth_clients
+      = render :partial => 'service', :locals => {:service => auth_client}
+        
 
-  - @authentications.each do |authentication|
-    %tr
-      %td= authentication.user_id
-      %td= authentication.auth_client_id
-      %td= authentication.uid
-      %td= authentication.token
-      %td= authentication.secret
-      %td= authentication.expires_at
-      %td= link_to 'Show', authentication
-      %td= link_to 'Edit', edit_authentication_path(authentication)
-      %td= link_to 'Destroy', authentication, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Authentication', new_authentication_path
+-# %h3 Coming Soon...
+-#%br/
+-#%ul
+-#  %li Box.net
+-#  %li BrowserID
+-#  %li BroadWorks
+-#  %li Concur
+-#  %li ConstantContact
+-#  %li ConstantContact2
+-#  %li Crowd
+-#  %li Dailymotion
+-#  %li Deezer
+-#  %li Dwolla
+-#  %li Dropbox
+-#  %li Eventbrite
+-#  %li Evernote
+-#  %li Geoloqi
+-#  %li GetGlue
+-#  %li GitHub
+-#  %li Google
+-#  %li Google OAuth2
+-#  %li Hyves
+-#  %li Identity
+-#  %li igovt
+-#  %li Instapaper
+-#  %li LinuxFr.org
+-#  %li Mailchimp
+-#  %li Mail.ru
+-#  %li Meetup.com
+-#  %li Mydigipass.com
+-#  %li Nate
+-#  %li Odnoklassniki
+-#  %li Ohloh
+-#  %li OpenStreetMap
+-#  %li Origo
+-#  %li Picplz
+-#  %li Podio
+-#  %li QQ
+-#  %li Remember The Milk
+-#  %li RunKeeper
+-#  %li Shibboleth
+-#  %li Shopify
+-#  %li SoundCloud
+-#  %li salesforce
+-#  %li 37signals
+-#  %li Steam
+-#  %li TradeKing
+-#  %li Tumblr
+-#  %li Viadeo
+-#  %li Vimeo
+-#  %li Vkontakte
+-#  %li Weibo
+-#  %li Weibo OAuth2
+-#  %li Windows Live ID
+-#  %li XING
+-#  %li Yahoo
+-#  %li Yammer
+-#  %li Yubikey
+-#  %li Yandex
+-#  %li YouTube

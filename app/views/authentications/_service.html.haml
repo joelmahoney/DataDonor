@@ -1,0 +1,13 @@
+%tr
+  %td= image_tag("favicons/#{service.name.downcase}.png")
+  %td
+    %h3= service.title
+  %td{:width=>'10px'} &nbsp;
+  %td.center
+    - auth = service.authentications.where(:user_id => current_user.id).first
+    - if current_user && auth.present?
+      = link_to 'Disconnect', authentication_path(auth), method: :delete
+    - else
+      .btn-group
+        =link_to 'Connect', "/auth/#{service.name}", :class=>'btn btn-primary'
+  %td= last_import_helper(service.name)

@@ -2,7 +2,7 @@ class AuthenticationsController < ApplicationController
   # GET /authentications
   # GET /authentications.json
   def index
-    @authentications = Authentication.all
+    @active_auth_clients = AuthClient.all
 
     respond_to do |format|
       format.html # index.html.erb
