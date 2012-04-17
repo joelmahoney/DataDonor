@@ -3,5 +3,5 @@
   %td
     %h3= service.name
   %td{:width=>'10px'} &nbsp;
-  %td=raw import_refresh_helper(service.name.downcase)
+  %td.center=raw import_refresh_helper(service.name.downcase)
   %td= last_import_helper(service.name.downcase)

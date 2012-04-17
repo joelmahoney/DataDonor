@@ -12,7 +12,7 @@ module UsersHelper
     if current_user && current_user.authentications.find_by_auth_client_name(service).present?
       "Connected"
     else
-      "<div class='btn-group'>#{link_to 'Connect', link, :class=>'btn btn-mini btn-primary'}</div>"
+      "<div class='btn-group'>#{link_to 'Connect', link, :class=>'btn btn-primary'}</div>"
     end
   end
   
