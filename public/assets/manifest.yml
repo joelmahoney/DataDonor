@@ -1,6 +1,5 @@
 ---
 favicon.ico: favicon-0f0e1c6d7c5b8cf5b56196f86e54491a.ico
-background.jpg: background-feb934e053d82b937ae73fb01f380e72.jpg
 check.png: check-490839e90c7872d1b2a2022764fca894.png
 favicons/facebook.png: favicons/facebook-8cbbcd20356a1cf5a3505fe5fc65fb64.png
 favicons/flickr.png: favicons/flickr-3a7942d765437f3d7d456961f2a09ad3.png
@@ -12,13 +11,10 @@ favicons/rdio.png: favicons/rdio-649f91eef15a4c556cbc0da6fc0f573f.png
 favicons/twitter.png: favicons/twitter-b4fdbbf5cd9e69f922607fd8d3d2c558.png
 glyphicons-halflings-white.png: glyphicons-halflings-white-4fbb6a0b9b4e61912f486ac494a858f1.png
 glyphicons-halflings.png: glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.png
-grid.png: grid-9b5e6ab3849ad16ceb7741d3847f8991.png
 heart-icon-gray.png: heart-icon-gray-87337958e0fc2fdb1d70dba3fd8fed8b.png
 heart-icon.png: heart-icon-4230cf66ca4f65b8c959696e423408c6.png
 heart.png: heart-c2e9d72345faf8249420293da5947075.png
-logo-small-white.png: logo-small-white-e8ece568a4cab4bc3c588de6595d497f.png
-logo-small.png: logo-small-c490fc09f2d4a13c42d131b67ca1906c.png
-logo.png: logo-3259ccf65947e491f3a311520dd388a4.png
+logo-header.png: logo-header-9fee766db6dab81a782cce4cca8f4636.png
 omniauth_buttons/facebook_32.png: omniauth_buttons/facebook_32-32c896e072499dd9ca6850f4133645d4.png
 omniauth_buttons/facebook_64.png: omniauth_buttons/facebook_64-654f0f2c1ba7e19e730d497947534230.png
 omniauth_buttons/github_32.png: omniauth_buttons/github_32-9f027aeb4fdc741c895ffa4395b7bb02.png
@@ -34,4 +30,4 @@ zocial-regular-webfont.svg: zocial-regular-webfont-e605ba119592de0d3c7e7bbb79e60
 zocial-regular-webfont.ttf: zocial-regular-webfont-d595cd0d166b0e0b817e3ff25c65f68e.ttf
 zocial-regular-webfont.woff: zocial-regular-webfont-6ff64954d12ae23bc1704abbe4b5e5cb.woff
 application.js: application-16003650fbd865d054c6403ee72a198c.js
-application.css: application-9fefda49057c887e3b3cc67997720927.css
+application.css: application-23798a98e4adb33716279ff09c00077c.css
