@@ -14,7 +14,7 @@ glyphicons-halflings.png: glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.
 heart-icon-gray.png: heart-icon-gray-87337958e0fc2fdb1d70dba3fd8fed8b.png
 heart-icon.png: heart-icon-4230cf66ca4f65b8c959696e423408c6.png
 heart.png: heart-c2e9d72345faf8249420293da5947075.png
-logo-header.png: logo-header-9fee766db6dab81a782cce4cca8f4636.png
+logo-header.png: logo-header-ad3793ba5136676d49f7fd8463cc071f.png
 omniauth_buttons/facebook_32.png: omniauth_buttons/facebook_32-32c896e072499dd9ca6850f4133645d4.png
 omniauth_buttons/facebook_64.png: omniauth_buttons/facebook_64-654f0f2c1ba7e19e730d497947534230.png
 omniauth_buttons/github_32.png: omniauth_buttons/github_32-9f027aeb4fdc741c895ffa4395b7bb02.png
@@ -30,4 +30,4 @@ zocial-regular-webfont.svg: zocial-regular-webfont-e605ba119592de0d3c7e7bbb79e60
 zocial-regular-webfont.ttf: zocial-regular-webfont-d595cd0d166b0e0b817e3ff25c65f68e.ttf
 zocial-regular-webfont.woff: zocial-regular-webfont-6ff64954d12ae23bc1704abbe4b5e5cb.woff
 application.js: application-16003650fbd865d054c6403ee72a198c.js
-application.css: application-23798a98e4adb33716279ff09c00077c.css
+application.css: application-d028159367ef20a6ce1fd7c63691fe3d.css
