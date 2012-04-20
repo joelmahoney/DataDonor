@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   
   def self.find_or_create_from_omniauth(data, current_user=nil)
     auth_client = AuthClient.find_by_name(data['provider'])
-    auth = Authentication.find_by_auth_client_name_and_uid(data['provider'], data['uid'])
+    auth = Authentication.find_by_auth_client_name_and_uid(data['provider'], data['uid'].try(:to_s))
     
     if auth.present? && auth.user.present?
       return auth.user
