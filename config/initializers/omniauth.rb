@@ -7,5 +7,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :rdio, ENV['RDIO_ID'], ENV['RDIO_SECRET']
   provider :instagram, ENV['INSTAGRAM_ID'], ENV['INSTAGRAM_SECRET']
   provider :flickr, ENV['FLICKR_ID'], ENV['FLICKR_SECRET']
-  provider :meetup, ENV['MEETUP_ID']
+  provider :meetup, ENV['MEETUP_ID'], ENV['MEETUP_SECRET']
 end
