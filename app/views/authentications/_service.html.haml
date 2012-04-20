@@ -12,7 +12,7 @@
           <div class="bar" style="width: 0%;"></div>
   %td.center
     - if current_user && auth.present?
-      = link_to 'Unlink', authentication_path(auth), method: :delete, confirm: "Disconnect and permanently delete all #{service.title} data?"
+      = link_to 'Unlink', authentication_path(auth), method: :delete, confirm: "Disconnect #{service.title} account?"
     - else
       .btn-group
         =link_to 'Connect', "/auth/#{service.name}", :class=>'btn btn-mini btn-success'

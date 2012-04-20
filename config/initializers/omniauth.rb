@@ -9,5 +9,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :flickr, ENV['FLICKR_ID'], ENV['FLICKR_SECRET']
   provider :meetup, ENV['MEETUP_ID'], ENV['MEETUP_SECRET']
   provider :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
-  # provider :youtube, ENV['YOUTUBE_ID'], ENV['YOUTUBE_SECRET']
+  provider :youtube, ENV['YOUTUBE_ID'], ENV['YOUTUBE_SECRET']
 end
