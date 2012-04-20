@@ -1,13 +1,14 @@
 p{ margin-bottom: 1em; }
-#signup{ margin-top: 30px; }
 .hero-unit{
   h1{ margin-bottom: .5em; }
+  #signup{ margin-top: 30px; }
 }
 
 table.services{
-  h3{ font-size: 19px; }
-  td{ padding: 5px 15px 5px 0; }
+  h3{ font-size: 19px; line-height: 0; margin: 10px 0 10px 0;}
+  td{ padding: 20px 30px 20px 0; }
 }
 
 .pink{ color: #e42f4e !important; }
 .center{ text-align: center; }
+.progress.adjusted{ margin: 0; width: 400px;}

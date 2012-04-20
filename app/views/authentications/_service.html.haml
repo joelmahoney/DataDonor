@@ -1,13 +1,18 @@
+- auth = service.authentications.where(:user_id => current_user.id).first
 %tr
-  %td= image_tag("favicons/#{service.name.downcase}.png")
-  %td
+  -# %td= image_tag("favicons/#{service.name}.png")
+  %td.pull-right
     %h3= service.title
-  %td{:width=>'10px'} &nbsp;
+  %td
+    .progress.adjusted
+      .progress-success
+        - if current_user && auth.present?
+          <div class="bar" style="width: 60%;"></div>
+        - else
+          <div class="bar" style="width: 0%;"></div>
   %td.center
-    - auth = service.authentications.where(:user_id => current_user.id).first
     - if current_user && auth.present?
-      = link_to 'Disconnect', authentication_path(auth), method: :delete
+      = link_to 'Unlink', authentication_path(auth), method: :delete, confirm: "Disconnect and permanently delete all #{service.title} data?"
     - else
       .btn-group
-        =link_to 'Connect', "/auth/#{service.name}", :class=>'btn btn-primary'
-  %td= last_import_helper(service.name)
+        =link_to 'Connect', "/auth/#{service.name}", :class=>'btn btn-mini btn-success'

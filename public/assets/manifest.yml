@@ -1,6 +1,7 @@
 ---
 favicon.ico: favicon-0f0e1c6d7c5b8cf5b56196f86e54491a.ico
 check.png: check-490839e90c7872d1b2a2022764fca894.png
+delete.png: delete-f6d385fff407de62ecf2fa01e098d82b.png
 favicons/facebook.png: favicons/facebook-8cbbcd20356a1cf5a3505fe5fc65fb64.png
 favicons/flickr.png: favicons/flickr-3a7942d765437f3d7d456961f2a09ad3.png
 favicons/foursquare.png: favicons/foursquare-546d5bd5342613ae3b14860342e9d68b.png
@@ -30,4 +31,4 @@ zocial-regular-webfont.svg: zocial-regular-webfont-e605ba119592de0d3c7e7bbb79e60
 zocial-regular-webfont.ttf: zocial-regular-webfont-d595cd0d166b0e0b817e3ff25c65f68e.ttf
 zocial-regular-webfont.woff: zocial-regular-webfont-6ff64954d12ae23bc1704abbe4b5e5cb.woff
 application.js: application-16003650fbd865d054c6403ee72a198c.js
-application.css: application-cf52de54575259e44fcce37857788fc1.css
+application.css: application-3adccd7e6e306505c9c1d2dc362b0315.css
