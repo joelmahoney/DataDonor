@@ -2,12 +2,14 @@
   %h1
     Doing good with data
   %p
-    Data is the currency of the information economy and the price of admission to much of the social web.&nbsp;
-    The content that we publish online &mdash; as well as the links that we click and the items that we purchase &mdash; are aggregated into detailed user profiles that are sold to advertisers in a billion-dollar marketplace. 
+    Data is the currency of the information economy and the price of admission to much of the web.&nbsp;
+    The content that we publish online &mdash; as well as the links that we click and the items that we purchase &mdash; are aggregated into detailed user profiles that are sold to advertisers in a billion-dollar marketplace.&nbsp; 
     Now you can give a copy of this data to qualified non-profit and research groups to help them advance their work.&nbsp; 
     To get started, sign in with a service, below &mdash; be a DataDonor today!
     %br/
   %br/
-  <a href='/auth/facebook' class='no-hover'><button type='submit' class='zocial facebook'>Sign In</button></a>
-  &nbsp;
-  <a href='/auth/twitter' class='no-hover'><button type='submit' class='zocial twitter'>Sign In</button></a>
+  .btn-toolbar
+    .btn-group
+      =link_to 'Sign Up', new_user_registration_path, :class=>'btn btn-primary btn-large'
+    .btn-group
+      = link_to 'Sign In', new_user_session_path, :class=>'btn btn-large'

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,6 +11,8 @@ gem 'compass-rails'
 gem 'haml-rails'
 gem 'sass-rails',   '~> 3.2.4'
 gem 'coffee-rails', '~> 3.2.2'
+gem 'devise'
+gem "geocoder"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'
@@ -42,16 +45,17 @@ gem 'omniauth-yammer'
 
 group :production do 
   gem 'thin'
-  gem 'pg'
   # gem 'newrelic_rpm'
 end
 
 group :development do
   gem 'thin'
-  gem 'sqlite3'
   gem 'foreman'
 end
 
+group :test do
+  gem 'sqlite3'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

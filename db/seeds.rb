@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+AuthClient.create([{name: 'facebook', title: 'Facebook'},
+  {name: 'flickr', title: 'Flickr'},
+  {name: 'foursquare', title: 'Foursquare'},
+  {name: 'github', title: 'GitHub'},
+  {name: 'instagram', title: 'Instagram'},
+  {name: 'linkedin', title: 'Linkedin'},
+  {name: 'meetup', title: 'Meetup.com'},
+  {name: 'netflix', title: 'Netflix'},
+  {name: 'rdio', title: 'Rdio'},
+  {name: 'runkeeper', title: 'RunKeeper'},
+  {name: 'twitter', title: 'Twitter'}
+  ])

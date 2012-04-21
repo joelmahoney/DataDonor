@@ -1,10 +1,4 @@
 Datadonor::Application.routes.draw do
-  # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  # 
-  # devise_scope :user do
-  #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-  # end
-
   root :to => 'pages#home'
   
   match '/auth/:provider/callback', to: 'sessions#create'
@@ -12,8 +6,8 @@ Datadonor::Application.routes.draw do
   resources :authentications
   resources :auth_clients
   resources :pages
-  resources :users
   resources :sessions
+  devise_for :users, :path => "users", :path_names => { :sign_in => 'sign_in', :sign_out => 'sign_out', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'sign_up' }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
