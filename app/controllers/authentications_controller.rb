@@ -1,4 +1,6 @@
 class AuthenticationsController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /authentications
   # GET /authentications.json
   def index
@@ -37,18 +39,15 @@ class AuthenticationsController < ApplicationController
     @authentication = Authentication.find(params[:id])
   end
 
-  # POST /authentications
-  # POST /authentications.json
   def create
-    @authentication = Authentication.new(params[:authentication])
-
+    data = request.env['omniauth.auth']
+    auth_client = AuthClient.find_by_name(data['provider'])
+    
     respond_to do |format|
-      if @authentication.save
-        format.html { redirect_to @authentication, notice: 'Authentication was successfully created.' }
-        format.json { render json: @authentication, status: :created, location: @authentication }
+      if current_user.authentications.create(:auth_client_id => auth_client.try(:id), :uid => data['uid'], :omniauth_data => data)
+        format.html { redirect_to authentications_path, notice: "#{auth_client.title} was successfully linked." }
       else
         format.html { render action: "new" }
-        format.json { render json: @authentication.errors, status: :unprocessable_entity }
       end
     end
   end

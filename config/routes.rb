@@ -1,14 +1,16 @@
 Datadonor::Application.routes.draw do
   root :to => 'pages#home'
-  
-  match '/auth/:provider/callback', to: 'sessions#create'
+  match 'authenticaitions/' => 'authentications#index', :as => :user_root
+  match '/auth/:provider/callback', to: 'authentications#create'
+
+  devise_for :users
   
   resources :authentications
   resources :auth_clients
+  resources :imports
   resources :pages
-  resources :sessions
-  devise_for :users, :path => "users", :path_names => { :sign_in => 'sign_in', :sign_out => 'sign_out', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'sign_up' }
-
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

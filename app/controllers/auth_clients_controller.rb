@@ -1,4 +1,6 @@
 class AuthClientsController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /auth_clients
   # GET /auth_clients.json
   def index
