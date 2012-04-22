@@ -40,11 +40,15 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    data = request.env['omniauth.auth']
     auth_client = AuthClient.find_by_name(data['provider'])
-    
+    data = request.env['omniauth.auth']
+    token = data['credentials']['token']
+    secret = data['credentials']['secret']
+
     respond_to do |format|
-      if current_user.authentications.create(:auth_client_id => auth_client.try(:id), :uid => data['uid'], :omniauth_data => data)
+      if current_user.authentications.create(:auth_client_id => auth_client.try(:id), :uid => data['uid'], :token => token, :secret => secret, :omniauth_data => data)
+        client = OAuth2::Client.new(ENV["#{auth_client.name.upcase}_ID"], ENV["#{auth_client.name.upcase}_SECRET"], :site => auth_client.api_url)
+        client.auth_code.authorize_url(:redirect_uri => 'http://localhost:8080/oauth2/callback')
         format.html { redirect_to authentications_path, notice: "#{auth_client.title} was successfully linked." }
       else
         format.html { render action: "new" }
