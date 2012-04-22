@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
     <style>
       body {
-        padding-top: 100px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
 
@@ -45,6 +45,8 @@
             <ul class="nav">
               <% if current_user %>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+              <% else %>
+                <li><%= link_to 'Sign In', new_user_session_path %></li>              
               <% end %>
             </ul>
           </div><!--/.nav-collapse -->
