@@ -26,9 +26,6 @@ omniauth_buttons/linkedin_32.png: omniauth_buttons/linkedin_32-72e8e2e62c4fbe8c9
 omniauth_buttons/linkedin_64.png: omniauth_buttons/linkedin_64-e4c2a75cc766b6139b4d46c77cb86340.png
 omniauth_buttons/twitter_32.png: omniauth_buttons/twitter_32-9d2707961b1a73db59c8ef68fc98f979.png
 omniauth_buttons/twitter_64.png: omniauth_buttons/twitter_64-69259a9934533f33d0a13479590c75fd.png
-zocial-regular-webfont.eot: zocial-regular-webfont-4bf6fb3186294466b9c233f8d0ff2161.eot
-zocial-regular-webfont.svg: zocial-regular-webfont-e605ba119592de0d3c7e7bbb79e60522.svg
-zocial-regular-webfont.ttf: zocial-regular-webfont-d595cd0d166b0e0b817e3ff25c65f68e.ttf
-zocial-regular-webfont.woff: zocial-regular-webfont-6ff64954d12ae23bc1704abbe4b5e5cb.woff
+runkeeper.png: runkeeper-bd7ea4d10cb2db994548f62031990673.png
 application.js: application-8c4c5d5cee484a5c4d26f6a34601a6fa.js
 application.css: application-406fb7b7207b0dc41dde0832edf245e7.css
