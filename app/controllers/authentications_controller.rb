@@ -40,8 +40,8 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    auth_client = AuthClient.find_by_name(data['provider'])
     data = request.env['omniauth.auth']
+    auth_client = AuthClient.find_by_name(data['provider'])
     token = data['credentials']['token']
     secret = data['credentials']['secret']
 
