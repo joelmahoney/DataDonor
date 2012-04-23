@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 1
+  name: MyString
+  description: MyText
+  start_date: 2012-04-22 22:47:33
+  location: MyString
+
+two:
+  organization_id: 1
+  name: MyString
+  description: MyText
+  start_date: 2012-04-22 22:47:33
+  location: MyString

@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 3.2.2'
 gem 'devise'
 gem "geocoder"
 gem 'high_voltage'
+gem 'paperclip'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'

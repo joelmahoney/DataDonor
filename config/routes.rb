@@ -1,4 +1,8 @@
 Datadonor::Application.routes.draw do
+  resources :projects
+
+  resources :organizations
+
   root :to => 'pages#home'
   match 'authenticaitions/' => 'authentications#index', :as => :user_root
   match '/auth/:provider/callback', to: 'authentications#create'
