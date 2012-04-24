@@ -6,10 +6,7 @@
   %td
     .progress.adjusted
       .progress-primary
-        - if current_user && auth.present?
-          <div class="bar" style="width: 60%;"></div>
-        - else
-          <div class="bar" style="width: 0%;"></div>
+        <div class="bar" style="width: 0%;"></div>
   %td.center
     - if current_user && auth.present?
       = link_to 'Disconnect', authentication_path(auth), method: :delete, confirm: "Disconnect #{service.title} account?"

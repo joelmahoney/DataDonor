@@ -47,7 +47,7 @@ class AuthenticationsController < ApplicationController
 
     respond_to do |format|
       if current_user.authentications.create(:auth_client_id => auth_client.try(:id), :uid => data['uid'], :token => token, :secret => secret, :omniauth_data => data)
-        format.html { redirect_to authentications_path, notice: "#{auth_client.title} was successfully linked." }
+        format.html { redirect_to authentications_path, notice: "Your #{auth_client.title} data has been queued for import." }
       else
         format.html { render action: "new" }
       end
