@@ -7,19 +7,20 @@
           %li= msg
 
   .field
-    = f.label :organization_id
-    = f.number_field :organization_id
-  .field
-    = f.label :name
+    = f.label :name, "Project Name"
     = f.text_field :name
   .field
     = f.label :description
-    = f.text_area :description
+    = f.text_area :description, :rows => 10
   .field
-    = f.label :start_date
-    = f.datetime_select :start_date
+    = f.label :organization_id
+    = f.select :organization_id, options_from_collection_for_select(@organizations, :id, :name)
+  .field
+    = f.label :start_date, "Project Start Date"
+    = f.date_select :start_date, :order => [:month, :day, :year]
   .field
     = f.label :location
-    = f.text_field :location
+    = f.text_field :location, :placeholder => 'Boston, MA'
   .actions
-    = f.submit 'Save'
+    %br/
+    = f.submit 'Save', :class => 'btn-primary btn-large'

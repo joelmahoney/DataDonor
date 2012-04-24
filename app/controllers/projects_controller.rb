@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :shared_variables
   # GET /projects
   # GET /projects.json
   def index
@@ -79,5 +80,10 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url }
       format.json { head :no_content }
     end
+  end
+  
+  private
+  def shared_variables
+    @organizations = Organization.all(:order => :name)
   end
 end

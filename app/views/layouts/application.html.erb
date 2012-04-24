@@ -43,6 +43,8 @@
           <a class="brand" href="/"><%= image_tag('logo-header.png') %></a>
           <div class="nav-collapse pull-right">
             <ul class="nav">
+              <li><%= link_to 'Projects', projects_path %></li>
+              <li><%= link_to 'How It Works', page_path('about') %></li>
               <% if current_user %>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
               <% else %>

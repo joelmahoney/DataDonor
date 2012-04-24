@@ -1,27 +1,15 @@
-%h1 Listing projects
+.page-header
+  %h1 
+    Projects
 
 %table
-  %tr
-    %th Organization
-    %th Name
-    %th Description
-    %th Start date
-    %th Location
-    %th
-    %th
-    %th
-
   - @projects.each do |project|
     %tr
-      %td= project.organization_id
-      %td= project.name
-      %td= project.description
-      %td= project.start_date
+      %td
+        %h3= project.name
+        %p= project.description
+        %p= formatted_date(project.start_date)
       %td= project.location
       %td= link_to 'Show', project
       %td= link_to 'Edit', edit_project_path(project)
       %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Project', new_project_path
