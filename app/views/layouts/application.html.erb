@@ -44,6 +44,7 @@
           <div class="nav-collapse pull-right">
             <ul class="nav">
               <% if current_user %>
+                <li><%= link_to 'Dashboard', user_root_path, :method => :delete %></li>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
               <% else %>
                 <li><%= link_to 'Sign In', new_user_session_path %></li>              

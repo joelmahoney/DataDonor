@@ -1,12 +1,33 @@
 .page-header
   %h1 
     How It Works
-%p
-  DataDonor lets you link to your online accounts using OAuth authentication.  Once imported, you can decide which data to share and which research projects to support.  You have total control over your data; your name and contact information are never shared.
+
+%h2
+  Step 1 - Link Your Accounts
 %br/
 %p
+  DataDonor supports the following services:
+  %ul
+    - AuthClient.all(:order => :name).each do |auth|
+      %li
+        %h3= auth.title
+%p
+  When you click the "Link Account" button from within your user dashboard, a connection is established to the service via OAuth authentication:
+
+%p.pull-center
   = image_tag('runkeeper.png')
-    
+  
+%h2
+  Step 2 - Import Your Data
+%br/
+%p After a connection with each service has been established, you can decide which data to import (coming soon).  From your Facebook data, for example, you might decide to share your wall posts and groups but not your private messages.
+%br/
+
+%h2
+  Step 3 - Support Projects
+%br/
+%p After your data is available in the DataDonor system, you can decide which projects to support (coming soon).  Browse the projects page and search for individual projects or select the categories of research that you are interested in.  Your data will automatically be shared with all groups who meet these criteria and who are admitted into the DataDonor system.
+
 %br/  
 .btn-toolbar
   .btn-group

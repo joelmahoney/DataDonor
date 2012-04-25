@@ -1,18 +1,17 @@
 Datadonor::Application.routes.draw do
-  resources :projects
-
-  resources :organizations
 
   root :to => 'pages#home'
   match 'authenticaitions/' => 'authentications#index', :as => :user_root
   match '/auth/:provider/callback', to: 'authentications#create'
-
-  devise_for :users
   
   resources :authentications
   resources :auth_clients
   resources :imports
+  resources :organizations
   resources :pages
+  resources :projects
+
+  devise_for :users
   
   
   # The priority is based upon order of creation:
