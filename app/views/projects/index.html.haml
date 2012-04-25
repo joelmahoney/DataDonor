@@ -2,16 +2,17 @@
   %h1 
     Projects
 
-Coming soon...
-
--#%table
--#  - @projects.each do |project|
--#    %tr
--#      %td
--#        %h3= project.name
--#        %p= project.description
--#        %p= formatted_date(project.start_date)
--#      %td= project.location
--#      %td= link_to 'Show', project
--#      %td= link_to 'Edit', edit_project_path(project)
--#      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
+- if @projects.blank?
+  Coming soon...
+- else
+  %table
+    - @projects.each do |project|
+      %tr
+        %td
+          %h3= project.name
+          %p= project.description
+          %p= formatted_date(project.start_date)
+        %td= project.location
+        %td= link_to 'Show', project
+        %td= link_to 'Edit', edit_project_path(project)
+        %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
