@@ -14,7 +14,7 @@
     .btn-group
       =button_to 'Yes, I would donate my data!', surveys_path(:support => true), :method => :post, :class=>'btn btn-success btn-large'
     .btn-group
-      =button_to "No, I'm not interested", surveys_path(:support => false), :method => :post, :class=>'btn btn-large'
+      =button_to "No, I wouldn't do this", surveys_path(:support => false), :method => :post, :class=>'btn btn-large'
       
   = render :partial => 'layouts/flashes'
       
