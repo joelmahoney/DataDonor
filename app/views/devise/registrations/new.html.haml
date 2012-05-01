@@ -2,7 +2,7 @@
   %h1 
     Create Your Account
 .well
-  == In order to create your account, we need to collect some basic profile information.  Your name and email address are required for internal communications; we will never share this information with any third party.  Your zipcode, date of birth and gender are required to match your data with the most relevant research projects.  Please see our #{link_to 'privacy policy', page_path('privacy')} for a detailed description of the information that we collect, and how it is used.
+  %p== In order to create your account, we need to collect some basic profile information.  Your name and email address are required for internal communications; we will never share this data with third parties. Your zipcode, date of birth and gender are required to match your data with the most relevant research projects.
   
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   - if resource.errors.any?
