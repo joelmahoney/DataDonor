@@ -1,8 +1,8 @@
 .page-header
   %h1 
     Create Your Account
-.well
-  %p== In order to create your account, we need to collect some basic profile information.  Your name and email address are required for internal communications; we will never share this data with third parties. Your zipcode, date of birth and gender are required to match your data with the most relevant research projects.
+    
+= render :partial => 'layouts/flashes'
   
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   - if resource.errors.any?
@@ -22,15 +22,6 @@
 
   = f.label :email, "Email address"
   = f.email_field :email
-  
-  = f.label :zipcode
-  = f.text_field :zipcode
-
-  = f.label :date_of_birth
-  = f.date_select :date_of_birth, :order => [:month, :day, :year], :start_year => Date.today.year - 100
-
-  = f.label :gender
-  = f.select :gender, ['Male', 'Female']
   
   = f.label :password
   = f.password_field :password

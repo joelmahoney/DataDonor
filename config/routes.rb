@@ -1,7 +1,7 @@
 Datadonor::Application.routes.draw do
 
   root :to => 'pages#home'
-  match 'authenticaitions/' => 'authentications#index', :as => :user_root
+  match '/' => 'pages#home', :as => :user_root
   match '/auth/:provider/callback', to: 'authentications#create'
   
   resources :authentications
@@ -10,6 +10,7 @@ Datadonor::Application.routes.draw do
   resources :organizations
   resources :pages
   resources :projects
+  resources :surveys
 
   devise_for :users
   

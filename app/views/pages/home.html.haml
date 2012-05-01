@@ -5,11 +5,16 @@
       = link_to 'Privacy and Big Data', 'http://shop.oreilly.com/product/0636920020103.do', :target => 'new'
 
   %p
-    Data is the currency of the information economy and the price of admission to much of the web.&nbsp;
-    Now you can give a copy of this asset to qualified research groups to help them advance their work.&nbsp;
-    DataDonor decides which groups to accept into the program; you decide which data to upload and share.&nbsp;
-    Sign up for an account, below, to be notified when we launch.  
-  %br/
+    Personal data is a billion dollar industry, but your own data is largely out of your control.&nbsp;
+    DataDonor lets you give a copy of this asset to qualified research groups to help them advance their work.&nbsp;
+    Imagine if you could give your Runkeeper.com data to a study on exercise habits, or your Zeo sleep monitor data to a study on memory loss &mdash; would you?&nbsp;
+    DataDonor is currently in beta, but if you're interested, we will keep you in the loop.&nbsp;
+    %br/
   .btn-toolbar
     .btn-group
-      =link_to 'Sign Up', new_user_registration_path, :class=>'btn btn-primary btn-large'
+      =button_to 'Yes, I would donate my data!', surveys_path(:support => true), :method => :post, :class=>'btn btn-success btn-large'
+    .btn-group
+      =button_to "No, I'm not interested", surveys_path(:support => false), :method => :post, :class=>'btn btn-large'
+      
+  = render :partial => 'layouts/flashes'
+      

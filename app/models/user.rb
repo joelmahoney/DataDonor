@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
   has_many :imports, :through => :authentications
     
-  validates :first_name, :last_name, :zipcode, :date_of_birth, :gender, :presence => true
+  validates :first_name, :last_name, :presence => true
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :email, :zipcode, :date_of_birth, :gender, :ethnicity
