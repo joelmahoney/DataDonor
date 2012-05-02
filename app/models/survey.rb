@@ -1,3 +1,3 @@
 class Survey < ActiveRecord::Base
-  attr_accessible :support
+  attr_accessible :support, :ip
 end
