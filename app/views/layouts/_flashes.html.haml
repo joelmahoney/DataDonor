@@ -1,6 +1,6 @@
 - if flash[:alert]
   .alert.alert-error
-    = flash[:alert]
+    = flash[:alert].html_safe
 - if flash[:notice]
-  .alert.alert-success
-    = flash[:notice]
+  .alert
+    = flash[:notice].html_safe
