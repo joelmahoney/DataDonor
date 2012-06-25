@@ -1,5 +1,12 @@
-.hero-unit h1{ font-size: 4em; line-height: 1em;
+.hero-unit h1{ 
+  font-size: 4em; 
+  line-height: 1em;
   a{color: black; text-decoration: underline; }
+}
+.hero-unit.small{
+  background-color: #d9edf7;
+  font-family: Georgia;
+  padding: 15px 60px 15px 55px;
 }
 .navbar{ height: 50px; }
 .container{ margin-bottom: 100px; }
@@ -27,3 +34,9 @@ table.services{
 #project_start_date_2i{width: 98px;}
 #project_start_date_3i{width: 50px;}
 #project_start_date_1i{width: 66px;}
+
+.rounded{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+}

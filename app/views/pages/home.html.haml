@@ -17,3 +17,12 @@
       =button_to "No, I wouldn't do this", surveys_path(:support => false), :method => :post, :class=>'btn btn-large'
       
   = render :partial => 'layouts/flashes'
+
+.hero-unit.small
+  %table
+    %tr
+      %td{:width=>'65px'}
+        = link_to image_tag('tim-oreilly.jpg', class: 'rounded'), 'https://twitter.com/timoreilly/status/216340534602633217'
+      %td{:style=>'padding-top: 18px;'}
+        .lead
+          &ldquo;I really like @<a href="https://twitter.com/joelmahoney">joelmahoney</a>'s datadonor.io proposal to the Knight News Challenge <a href="http://t.co/fwDeBN1X" title="http://bit.ly/LH2N9y">bit.ly/LH2N9y</a> We need this! <a href="https://twitter.com/search/%2523dataliberation">#dataliberation</a>&rdquo; &nbsp;&mdash; Tim O'Reilly</p>
