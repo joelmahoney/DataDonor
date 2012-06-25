@@ -1,3 +1,6 @@
+.hero-unit{
+  padding: 50px;
+}
 .hero-unit h1{ 
   font-size: 4em; 
   line-height: 1em;
@@ -6,7 +9,7 @@
 .hero-unit.small{
   background-color: #d9edf7;
   font-family: Georgia;
-  padding: 15px 60px 15px 55px;
+  padding: 15px 50px 15px 50px;
 }
 .navbar{ height: 50px; }
 .container{ margin-bottom: 100px; }
