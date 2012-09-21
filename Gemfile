@@ -15,6 +15,7 @@ gem 'devise'
 gem "geocoder"
 gem 'high_voltage'
 gem 'paperclip'
+gem 'heroku'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer'
